@@ -1,0 +1,44 @@
+// Auto-generated prebuilt APEX Blueprint for external/jemalloc_new
+// Staged from Extractive APEX package: ext-jemalloc_new (org.blisslabs.ag.ext.jemalloc_new)
+
+package {
+    default_applicable_licenses: ["external_jemalloc_new_license"],
+}
+
+license {
+    name: "external_jemalloc_new_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-ISC",
+        "SPDX-license-identifier-MIT",
+        "legacy_unencumbered",
+    ],
+    license_text: [
+        "COPYING",
+    ],
+}
+
+cc_prebuilt_library_static {
+    name: "libjemalloc5",
+    srcs: ["lib/libjemalloc5.a"],
+    export_include_dirs: ["include"],
+    ramdisk_available: true,
+    vendor_ramdisk_available: true,
+    recovery_available: true,
+    apex_available: [
+        "com.android.runtime",
+        "//apex_available:platform",
+    ],
+    host_supported: true,
+    native_bridge_supported: true,
+}
+
+cc_prebuilt_library_static {
+    name: "libjemalloc5_jet",
+    srcs: ["lib/libjemalloc5_jet.a"],
+    export_include_dirs: ["include"],
+    host_supported: true,
+    native_bridge_supported: true,
+}

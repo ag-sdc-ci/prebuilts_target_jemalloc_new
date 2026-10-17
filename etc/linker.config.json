@@ -1,0 +1,15 @@
+{
+	"provideLibs": [	
+		    "libdummy_binary_libjemalloc5-jet.a-x86_64-v2.so",
+		    "libdummy_binary_libjemalloc5-jet.a.so",
+		    "libdummy_binary_libjemalloc5.a-x86_64-v2.so",
+		    "libdummy_binary_libjemalloc5.a.so",
+		    "libdummy_ext_jemalloc_new-x86_64-v2.so",
+		    "libdummy_ext_jemalloc_new.so",
+		    "libdummy_headers_ext_jemalloc_new-x86_64-v2.so",
+		    "libdummy_headers_ext_jemalloc_new.so",
+		    "libdummy_shared_jemalloc_new-x86_64-v2.so",
+		    "libdummy_shared_jemalloc_new.so"
+	],
+	"visible": true
+}
