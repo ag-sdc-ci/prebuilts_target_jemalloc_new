@@ -22,7 +22,16 @@ license {
 
 cc_prebuilt_library_static {
     name: "libjemalloc5",
-    srcs: ["lib/libjemalloc5.a"],
+    vendor_available: true,
+    product_available: true,
+    multilib: {
+        lib32: {
+            srcs: ["lib/libjemalloc5.a"],
+        },
+        lib64: {
+            srcs: ["lib64/libjemalloc5.a"],
+        },
+    },
     export_include_dirs: ["include"],
     ramdisk_available: true,
     vendor_ramdisk_available: true,
@@ -37,7 +46,16 @@ cc_prebuilt_library_static {
 
 cc_prebuilt_library_static {
     name: "libjemalloc5_jet",
-    srcs: ["lib/libjemalloc5_jet.a"],
+    vendor_available: true,
+    product_available: true,
+    multilib: {
+        lib32: {
+            srcs: ["lib/libjemalloc5_jet.a"],
+        },
+        lib64: {
+            srcs: ["lib64/libjemalloc5_jet.a"],
+        },
+    },
     export_include_dirs: ["include"],
     host_supported: true,
     native_bridge_supported: true,
